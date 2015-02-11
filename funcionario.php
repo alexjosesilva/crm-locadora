@@ -176,7 +176,7 @@ include 'conexao.php';
 	                        	<tr>
 	                        		<td class="col-md-1"><a class="btn btn-default" href="#" role="button">Alterar</a></td>
 	                        		<td class="col-md-6"><?php echo $linha['nome']; ?></td>
-	                        		<td class="col-md-1"><a class="btn btn-danger" href="<?php echo "imprimir_funncionario.php?codigo=".$linha['codigo']; ?>" role="button">Imprimmir</a></td>
+	                        		<td class="col-md-1"><a class="btn btn-danger" href="<?php echo "imprimir_funcionario.php?opcao=1&codigo=".$linha['codigo']; ?>" role="button">Imprimir</a></td>
 	                        		<td class="col-md-1"><a class="btn btn-danger" href="<?php echo "excluir_funcionario.php?codigo=".$linha['codigo']; ?>" role="button">Excluir</a></td>
 	                        	</tr>
                         	<?php 
@@ -186,7 +186,7 @@ include 'conexao.php';
                       
                       	<hr>
                         
-                        <a class="btn btn-info" href="<?php echo "imprimir_funcionario.php"; ?>" role="button">Imprimir Listagem de Funcionarios</a>  
+                        <a class="btn btn-info" href="<?php echo "imprimir_funcionario.php?opcao=2"; ?>" role="button">Imprimir Listagem de Funcionarios</a>  
                         
                         <hr>
                       

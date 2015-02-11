@@ -40,10 +40,10 @@
 	
 	//Até aqui é igual para todos...............
 	
-	if($_GET['opcao']=='1'){//mostrar todos os filmes
+	if($_GET['opcao']=='2'){//mostrar todos os filmes
 	
 	//Query: mostrar todos os clientes
-	$sql = "SELECT * FROM clientes";
+	$sql = "SELECT * FROM funcionario";
 	$dados = mysql_query($sql);
 	
 	//varrendo o banco atras do dados do filme
@@ -59,19 +59,19 @@
 		
 		//configura a fonte Label.........
 		$fpdf->setFont('arial','B',12);
-		$fpdf->Cell(70,20,converte("Telefone"),0,0,'L');
+		$fpdf->Cell(70,20,converte("Email"),0,0,'L');
 	
     	//configura a fonte
 		$fpdf->setFont('arial','B',12);
-		$fpdf->Cell(0,20,$linha['telefone'],0,1,'L');
+		$fpdf->Cell(0,20,$linha['email'],0,1,'L');
 		
 	}//while
 	
 	}
-    elseif ($_GET['opcao']=='2') {
+    elseif ($_GET['opcao']=='1') {
     //relatorio individual pegar o 'id'
 			//Query: mostrar todos os filmes
-	$sql = "SELECT * FROM filme WHERE codigo=".$_GET['codigo'];
+	$sql = "SELECT * FROM funcionario WHERE codigo=".$_GET['codigo'];
 	$dados = mysql_query($sql);
 	
 	//varrendo o banco atras do dados do filme
@@ -85,7 +85,6 @@
 		$fpdf->setFont('arial','B',12);
 		$fpdf->Cell(0,20,$linha['codigo'],0,1,'L');
 		
-		
 		//configura a fonte Label...........
 		$fpdf->setFont('arial','B',12);
 		$fpdf->Cell(70,20,converte("Nome"),0,0,'L');
@@ -93,30 +92,14 @@
     	//configura a fonte
 		$fpdf->setFont('arial','B',12);
 		$fpdf->Cell(0,20,$linha['nome'],0,1,'L');
-
-		//configura a fonte Label............
-		$fpdf->setFont('arial','B',12);
-		$fpdf->Cell(70,20,converte("Telefone"),0,0,'L');
-	
-    	//configura a fonte
-		$fpdf->setFont('arial','B',12);
-		$fpdf->Cell(0,20,$linha['telefone'],0,1,'L');
-		
-		//configura a fonte Label............
-		$fpdf->setFont('arial','B',12);
-		$fpdf->Cell(70,20,converte("Endereco"),0,0,'L');
-	
-    	//configura a fonte
-		$fpdf->setFont('arial','B',12);
-		$fpdf->Cell(0,20,$linha['endereco'],0,1,'L');
-		
+				
 		//configura a fonte Label.........
 		$fpdf->setFont('arial','B',12);
-		$fpdf->Cell(70,20,converte("Cpf"),0,0,'L');
+		$fpdf->Cell(70,20,converte("Salario"),0,0,'L');
 	
     	//configura a fonte
 		$fpdf->setFont('arial','B',12);
-		$fpdf->Cell(0,20,$linha['cpf'],0,1,'L');
+		$fpdf->Cell(0,20,$linha['salario'],0,1,'L');
 		
 		//configura a fonte Label.........
 		$fpdf->setFont('arial','B',12);
@@ -125,6 +108,21 @@
     	//configura a fonte
 		$fpdf->setFont('arial','B',12);
 		$fpdf->Cell(0,20,$linha['email'],0,1,'L');
+		
+		//configura a fonte Label.........
+		$fpdf->setFont('arial','B',12);
+		$fpdf->Cell(70,20,converte("estado"),0,0,'L');
+	
+		 //tratar variavel estado
+		if($linha['estado'])
+			$estado="Solteiro";
+		else
+			$estado = "Casado";	
+		
+	
+    	//configura a fonte
+		$fpdf->setFont('arial','B',12);
+		$fpdf->Cell(0,20,$estado,0,1,'L');
 		
 	}//while
 	}

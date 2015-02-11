@@ -171,7 +171,7 @@ include 'conexao.php';
 	                        	<tr>
 	                        		<td class="col-md-1"><a class="btn btn-default" href="#" role="button">Alterar</a></td>
 	                        		<td class="col-md-6"><?php echo $linha['nome']; ?></td>
-	                        		<td class="col-md-1"><a class="btn btn-danger" href="<?php echo "imprimir_cliente.php?opcao=1&codigo=".$linha['codigo']; ?>" role="button">Imprimmir</a></td>
+	                        		<td class="col-md-1"><a class="btn btn-danger" href="<?php echo "imprimir_cliente.php?opcao=1&codigo=".$linha['codigo']; ?>" role="button">Imprimir</a></td>
 	                        		<td class="col-md-1"><a class="btn btn-danger" href="<?php echo "excluir_cliente.php?codigo=".$linha['codigo']; ?>" role="button">Excluir</a></td>
 	                        	</tr>
                         	<?php 

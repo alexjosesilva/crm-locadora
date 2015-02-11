@@ -40,7 +40,7 @@
 	
 	//Até aqui é igual para todos...............
 	
-	if($_GET['opcao']=='1'){//mostrar todos os filmes
+	if($_GET['opcao']=='2'){//mostrar todos os filmes
 	
 	//Query: mostrar todos os clientes
 	$sql = "SELECT * FROM cliente";
@@ -65,13 +65,14 @@
 		$fpdf->setFont('arial','B',12);
 		$fpdf->Cell(0,20,$linha['telefone'],0,1,'L');
 		
+		
 	}//while
 	
 	}
-    elseif ($_GET['opcao']=='2') {
+    elseif ($_GET['opcao']=='1') {
     //relatorio individual pegar o 'id'
 			//Query: mostrar todos os filmes
-	$sql = "SELECT * FROM filme WHERE codigo=".$_GET['codigo'];
+	$sql = "SELECT * FROM cliente WHERE codigo=".$_GET['codigo'];
 	$dados = mysql_query($sql);
 	
 	//varrendo o banco atras do dados do filme
