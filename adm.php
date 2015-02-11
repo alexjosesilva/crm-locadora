@@ -154,7 +154,7 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
 	                        	<tr>
 	                        		<td class="col-md-1"><a class="btn btn-default" href="alterar_filme.php?codigo=<?=$linha['codigo']; ?>" role="button">Alterar</a></td>
 	                        		<td class="col-md-6"><?php echo $linha['titulo'];  ?></td>
-	                        		<td class="col-md-1"><a class="btn btn-danger" href="<?php echo "imprimir_filme.php?codigo=".$linha['codigo']; ?>" role="button">Imprimir</a></td>
+	                        		<td class="col-md-1"><a class="btn btn-danger" href="<?php echo "imprimir_filme.php?opcao=2&codigo=".$linha['codigo']; ?>" role="button">Imprimir</a></td>
 	                        		<td class="col-md-1"><a class="btn btn-danger" href="<?php echo "excluir_filme.php?codigo=".$linha['codigo']; ?>" role="button">Excluir</a></td>
 	                        	</tr>
                         	<?php 
@@ -164,7 +164,7 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
 						</table>
                       
                         <hr>
-                        <a class="btn btn-info" href="<?php echo "imprimir_filme.php"; ?>" role="button">Imprimir Listagem de Filmes</a>  
+                        	<a class="btn btn-info" href="<?php echo "imprimir_filme.php?opcao=1"; ?>" role="button">Imprimir Listagem de Filmes</a>  
                         <hr>
                       
                         <div class="row" id="footer">    
