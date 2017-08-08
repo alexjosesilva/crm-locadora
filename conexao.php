@@ -1,12 +1,12 @@
 <?php
 
 //acesso ao banco de dados   
-$enderecobd = "localhost";   
-$dbname = "popcorntv";       
+$enderecobd = "127.0.0.1:49750";   
+$dbname = "localdb";       
                              
 //dados do banco             
-$usuariobd = "root";         
-$senhabd = "123456";         
+$usuariobd = "azure";         
+$senhabd = "6#vWHD_$";         
 
 //conectar ao banco                                                                                   
 $con   = mysql_connect($enderecobd,$usuariobd,$senhabd) or die ("Erro na conexão do Banco de Dados!");
