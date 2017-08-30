@@ -39,3 +39,8 @@ Partes a ser desenvolvido:
 	
 3. Gerar Relatorios
 	1.Em pdf
+	
+<p align="center">
+  <img src="popcorntv.png" width="350"/>
+  <img src="popcorntv1.png" width="350"/>
+</p>
