@@ -7,7 +7,7 @@
 	$codigo		=	$_REQUEST['codigo'];
 	var_dump($codigo);
 	//query
-	$query = "DELETE FROM `popcorntv`.`cliente`WHERE cliente.codigo=".$codigo;
+	$query = "DELETE FROM `localdb`.`cliente`WHERE cliente.codigo=".$codigo;
 
 	$resultado = mysql_query($query,$con) or die ("erro em excluir dado no banco!");
 	header('Location:cliente.php');

@@ -11,7 +11,7 @@
 	$codigo		=	"DEFAULT";
 
 	//query
-	$query = "INSERT INTO `popcorntv`.`cliente`(`codigo`,`nome`,`cpf`,`telefone`,`endereco`,`email`)
+	$query = "INSERT INTO `localdb`.`cliente`(`codigo`,`nome`,`cpf`,`telefone`,`endereco`,`email`)
 VALUES (".$codigo.",'".$nome."','".$cpf."','".$telefone."','".$endereco."','".$email."')";
 	
 		

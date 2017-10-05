@@ -10,7 +10,7 @@
 	$codigo		=	"DEFAULT";
 
 	//query
-	$query = "INSERT INTO `popcorntv`.`filme`(`codigo`,`titulo`,`sinopse`,`quantidade`,`trailer`)
+	$query = "INSERT INTO `localdb`.`filme`(`codigo`,`titulo`,`sinopse`,`quantidade`,`trailer`)
 VALUES (".$codigo.",'".$titulo."','".$sinopse."','".$quantidade."','".$trailer."')";
 
 	$resultado = mysql_query($query,$con) or die ("erro em inserir no banco!");

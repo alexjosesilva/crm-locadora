@@ -13,7 +13,7 @@
 
 
 	//query
-	$query = "INSERT INTO `popcorntv`.`funcionario`(`codigo`,`nome`,`estado`,`salario`,`email`,`senha`)
+	$query = "INSERT INTO `localdb`.`funcionario`(`codigo`,`nome`,`estado`,`salario`,`email`,`senha`)
 VALUES (".$codigo.",'".$nome."',".$estado.",'".$salario."','".$email."','".$senha."')";
 	
 	$resultado = mysql_query($query,$con) or die ("erro em inserir no banco!".mysql_error());
